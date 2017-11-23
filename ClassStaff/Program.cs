@@ -78,7 +78,12 @@ namespace ClassStaff
     {
         static void Main(string[] args)
         {
-            
+            int pay;
+
+            Staff staff1 = new Staff("Peter");
+            staff1.HoursWorked = 160;
+            pay = staff1.CalculatePay(1000, 400);
+            Console.WriteLine("Pay = {0}", pay);
         }
     }
 }
