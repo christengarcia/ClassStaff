@@ -57,6 +57,20 @@ namespace ClassStaff
             return "Name of Staff = " + nameOfStaff + ", hourlyRate = "
                 + hourlyRate + ", hWorked = " + hWorked;
         }
+
+        public Staff(string name)
+        {
+            nameOfStaff = name;
+            Console.WriteLine("\n" + nameOfStaff);
+            Console.WriteLine("-------------------------");
+        }
+
+        public Staff(string firstName, string lastName)
+        {
+            nameOfStaff = firstName + " " + lastName;
+            Console.WriteLine("\n" + nameOfStaff);
+            Console.WriteLine("-------------------------");
+        }
     }
 
 
