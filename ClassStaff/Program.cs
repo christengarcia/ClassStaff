@@ -22,7 +22,44 @@ namespace ClassStaff
                     hWorked = 0;
             }
         }
+
+        public void PrintMessage()
+        {
+            Console.WriteLine("Calculating Pay...");
+        }
+
+        public int CalculatePay()
+        {
+            PrintMessage();
+
+            int staffPay;
+            staffPay = hWorked * hourlyRate;
+
+            if (hWorked > 0)
+                return staffPay;
+            else
+                return 0;
+        }
+        // Overloading method with different signature passed
+        // through the arguement.
+        public int CalculatePay(int bonus, int allowance)
+        {
+            PrintMessage();
+
+            if (hWorked > 0)
+                return hWorked * hourlyRate + bonus + allowance;
+            else
+                return 0;
+        }
+
+        public override string ToString()
+        {
+            return "Name of Staff = " + nameOfStaff + ", hourlyRate = "
+                + hourlyRate + ", hWorked = " + hWorked;
+        }
     }
+
+
     class Program
     {
         static void Main(string[] args)
